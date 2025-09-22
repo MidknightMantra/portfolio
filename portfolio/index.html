@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Name | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name — Software Engineer & UX Designer</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- 3D Scene Container -->
-  <div class="scene">
-    <!-- Hero Layer -->
-    <div class="layer hero-layer">
+
+  <!-- SCENE: The container for all depth. One parent. One truth. -->
+  <div id="scene" class="scene">
+
+    <!-- LAYERS: Each one a plane in 3D space. No div soup. -->
+    <div class="layer" data-depth="0">
       <div class="container">
         <h1>Hi, I'm <span class="highlight">Your Name</span></h1>
         <p class="subtitle">Software Engineer & UX/UI Designer — Building digital experiences that work, not just look good.</p>
@@ -23,8 +24,7 @@
       </div>
     </div>
 
-    <!-- Skills Layer -->
-    <div class="layer skills-layer">
+    <div class="layer" data-depth="-200">
       <div class="container">
         <h2>How I Think & Build</h2>
         <div class="skills-grid">
@@ -68,14 +68,13 @@
       </div>
     </div>
 
-    <!-- Projects Layer -->
-    <div class="layer projects-layer">
+    <div class="layer" data-depth="-400">
       <div class="container">
         <h2>Featured Projects</h2>
         <div class="project-grid">
           <article class="project">
             <h3>Finance App Redesign & Rebuild</h3>
-            <p class="project-meta">I redesigned the user flow in Figma, then built the frontend in React — reducing drop-off by 42%.</p>
+            <p class="project-meta">Redesigned onboarding flow in Figma; rebuilt in React. Reduced drop-off by 42%.</p>
             <div class="project-tags">
               <span class="tag">Figma</span>
               <span class="tag">React</span>
@@ -83,12 +82,12 @@
               <span class="tag">Accessibility</span>
             </div>
             <a href="#" class="btn btn-small">View Design →</a>
-            <a href="#" class="btn btn-small" style="margin-left: 0.5rem; background: #222; color: white;">View Code →</a>
+            <a href="#" class="btn btn-small" style="background: #222; color: white;">View Code →</a>
           </article>
 
           <article class="project">
             <h3>Weather Dashboard</h3>
-            <p class="project-meta">Built a real-time weather dashboard using API and React. 10K+ monthly users.</p>
+            <p class="project-meta">Built real-time dashboard with React and OpenWeather API. 10K+ monthly users.</p>
             <div class="project-tags">
               <span class="tag">React</span>
               <span class="tag">API</span>
@@ -96,12 +95,12 @@
               <span class="tag">Responsive</span>
             </div>
             <a href="#" class="btn btn-small">View Design →</a>
-            <a href="#" class="btn btn-small" style="margin-left: 0.5rem; background: #222; color: white;">View Code →</a>
+            <a href="#" class="btn btn-small" style="background: #222; color: white;">View Code →</a>
           </article>
 
           <article class="project">
             <h3>Portfolio Website</h3>
-            <p class="project-meta">Designed and coded this very portfolio — 3D, responsive, and built from scratch on Ubuntu.</p>
+            <p class="project-meta">Designed and coded this portfolio — 3D, accessible, no frameworks, built on Ubuntu.</p>
             <div class="project-tags">
               <span class="tag">HTML</span>
               <span class="tag">CSS</span>
@@ -109,14 +108,13 @@
               <span class="tag">GitHub Pages</span>
             </div>
             <a href="#" class="btn btn-small">View Design →</a>
-            <a href="#" class="btn btn-small" style="margin-left: 0.5rem; background: #222; color: white;">View Code →</a>
+            <a href="#" class="btn btn-small" style="background: #222; color: white;">View Code →</a>
           </article>
         </div>
       </div>
     </div>
 
-    <!-- Case Study Layer -->
-    <div class="layer case-studies-layer">
+    <div class="layer" data-depth="-600">
       <div class="container">
         <h2>One Project, Two Roles</h2>
         <p class="subtitle">Here’s how I combined design and development to solve a real problem.</p>
@@ -131,7 +129,7 @@
               <p><strong>The Result:</strong> Onboarding completion jumped to 71% within 2 weeks. The design system became the company standard.</p>
             </div>
             <div class="case-study-images">
-              <img src="images/case-study-1.jpg" alt="Before/After: Banking App Onboarding" style="width: 100%; border-radius: 12px; margin-top: 1.5rem;">
+              <img src="images/case-study-1.jpg" alt="Before/After: Banking App Onboarding" loading="lazy">
             </div>
           </div>
           <a href="https://your-github.com/your-banking-project" class="btn btn-small" target="_blank">View Full Case Study →</a>
@@ -139,8 +137,7 @@
       </div>
     </div>
 
-    <!-- Contact Layer -->
-    <div class="layer contact-layer">
+    <div class="layer" data-depth="-800">
       <div class="container">
         <h2>Let’s Build Something That Matters</h2>
         <p>I’m open to roles where design and engineering collide — startups, product teams, or open-source projects.</p>
@@ -156,18 +153,22 @@
       </div>
     </div>
 
-    <!-- Floating 3D Elements (Decorative) -->
-    <div class="floating-element element-1"></div>
-    <div class="floating-element element-2"></div>
-    <div class="floating-element element-3"></div>
+    <!-- FLOATING ELEMENTS: Decorative. Non-essential. But beautiful. -->
+    <div class="floating-element" style="width: 200px; height: 200px; background: radial-gradient(circle, #667eea, transparent 70%); top: 10%; left: 10%;"></div>
+    <div class="floating-element" style="width: 150px; height: 150px; background: radial-gradient(circle, #764ba2, transparent 70%); bottom: 20%; right: 15%;"></div>
+    <div class="floating-element" style="width: 100px; height: 100px; background: radial-gradient(circle, #8f66e8, transparent 70%); top: 60%; left: 80%;"></div>
+
   </div>
 
-  <!-- Footer -->
+  <!-- FOOTER: Simple. Final. Unchanging. -->
   <footer>
     <div class="container">
-      <p>&copy; 2025 Your Name. Built with ❤️ on Ubuntu + 3D.</p>
+      <p>&copy; 2025 Your Name. Built with care on Ubuntu.</p>
     </div>
   </footer>
 
+  <!-- SCRIPT: One file. One purpose. No bundlers. No nonsense. -->
   <script src="script.js"></script>
+
 </body>
+</html>
