@@ -8,73 +8,166 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="container">
-      <h1>Hi, I'm <span class="highlight">Your Name</span></h1>
-      <p>UI/UX Designer & Frontend Developer</p>
-      <div class="cta-buttons">
-        <a href="#projects" class="btn btn-primary">View My Work</a>
-        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+  <!-- 3D Scene Container -->
+  <div class="scene">
+    <!-- Hero Layer -->
+    <div class="layer hero-layer">
+      <div class="container">
+        <h1>Hi, I'm <span class="highlight">Your Name</span></h1>
+        <p class="subtitle">Software Engineer & UX/UI Designer — Building digital experiences that work, not just look good.</p>
+        <div class="cta-buttons">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#case-studies" class="btn btn-outline">See How I Think</a>
+          <a href="#contact" class="btn btn-secondary">Let’s Talk</a>
+        </div>
       </div>
     </div>
-  </header>
 
-  <!-- Projects Section -->
-  <section id="projects" class="projects">
-    <div class="container">
-      <h2>Featured Projects</h2>
-      <div class="project-grid">
-        <!-- Project 1 -->
-        <article class="project">
-          <h3>Finance App Redesign</h3>
-          <p>Redesigned mobile banking app for 50K+ users. Improved NPS by 38%.</p>
-          <small><strong>Role:</strong> Lead Designer</small><br>
-          <small><strong>Tech:</strong> Figma, React</small>
-          <a href="#" class="btn btn-small">View Project →</a>
-        </article>
+    <!-- Skills Layer -->
+    <div class="layer skills-layer">
+      <div class="container">
+        <h2>How I Think & Build</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>🛠️ Engineering</h3>
+            <ul>
+              <li>JavaScript / TypeScript</li>
+              <li>React / Next.js</li>
+              <li>Node.js / Express</li>
+              <li>Python / Flask</li>
+              <li>Git / CI/CD</li>
+              <li>REST / GraphQL</li>
+              <li>Testing (Jest, Cypress)</li>
+            </ul>
+          </div>
 
-        <!-- Project 2 -->
-        <article class="project">
-          <h3>Weather Dashboard</h3>
-          <p>Built a real-time weather dashboard using API and React. 10K+ monthly users.</p>
-          <small><strong>Role:</strong> Frontend Developer</small><br>
-          <small><strong>Tech:</strong> React, CSS Modules, OpenWeather API</small>
-          <a href="#" class="btn btn-small">View Project →</a>
-        </article>
+          <div class="skill-category">
+            <h3>🎨 Design</h3>
+            <ul>
+              <li>User Research & Interviews</li>
+              <li>Figma / Adobe XD</li>
+              <li>Wireframing & Prototyping</li>
+              <li>Design Systems</li>
+              <li>Accessibility (WCAG)</li>
+              <li>Usability Testing</li>
+              <li>Interaction Design</li>
+            </ul>
+          </div>
 
-        <!-- Project 3 -->
-        <article class="project">
-          <h3>Portfolio Website</h3>
-          <p>Designed and coded this very portfolio — clean, fast, and mobile-first.</p>
-          <small><strong>Role:</strong> Full-Stack Designer</small><br>
-          <small><strong>Tech:</strong> HTML, CSS, GitHub Pages</small>
-          <a href="#" class="btn btn-small">View Project →</a>
-        </article>
+          <div class="skill-category">
+            <h3>🧠 Mindset</h3>
+            <ul>
+              <li>Problem-First Design</li>
+              <li>Agile & Cross-Functional Teams</li>
+              <li>Feedback-Driven Iteration</li>
+              <li>Shipping Fast, Improving Faster</li>
+              <li>Empathy > Aesthetics</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2>Let’s Build Something Amazing</h2>
-      <p>Email: hello@yourname.com</p>
-      <p>
-        <a href="https://linkedin.com/in/yourname" target="_blank">LinkedIn</a> •
-        <a href="https://github.com/yourname" target="_blank">GitHub</a> •
-        <a href="#">Dribbble</a>
-      </p>
+    <!-- Projects Layer -->
+    <div class="layer projects-layer">
+      <div class="container">
+        <h2>Featured Projects</h2>
+        <div class="project-grid">
+          <article class="project">
+            <h3>Finance App Redesign & Rebuild</h3>
+            <p class="project-meta">I redesigned the user flow in Figma, then built the frontend in React — reducing drop-off by 42%.</p>
+            <div class="project-tags">
+              <span class="tag">Figma</span>
+              <span class="tag">React</span>
+              <span class="tag">User Research</span>
+              <span class="tag">Accessibility</span>
+            </div>
+            <a href="#" class="btn btn-small">View Design →</a>
+            <a href="#" class="btn btn-small" style="margin-left: 0.5rem; background: #222; color: white;">View Code →</a>
+          </article>
+
+          <article class="project">
+            <h3>Weather Dashboard</h3>
+            <p class="project-meta">Built a real-time weather dashboard using API and React. 10K+ monthly users.</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">API</span>
+              <span class="tag">CSS Modules</span>
+              <span class="tag">Responsive</span>
+            </div>
+            <a href="#" class="btn btn-small">View Design →</a>
+            <a href="#" class="btn btn-small" style="margin-left: 0.5rem; background: #222; color: white;">View Code →</a>
+          </article>
+
+          <article class="project">
+            <h3>Portfolio Website</h3>
+            <p class="project-meta">Designed and coded this very portfolio — 3D, responsive, and built from scratch on Ubuntu.</p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">GitHub Pages</span>
+            </div>
+            <a href="#" class="btn btn-small">View Design →</a>
+            <a href="#" class="btn btn-small" style="margin-left: 0.5rem; background: #222; color: white;">View Code →</a>
+          </article>
+        </div>
+      </div>
     </div>
-  </section>
+
+    <!-- Case Study Layer -->
+    <div class="layer case-studies-layer">
+      <div class="container">
+        <h2>One Project, Two Roles</h2>
+        <p class="subtitle">Here’s how I combined design and development to solve a real problem.</p>
+
+        <div class="case-study">
+          <h3>Banking App Onboarding Flow</h3>
+          <div class="case-study-content">
+            <div class="case-study-text">
+              <p><strong>The Problem:</strong> Users were dropping off at step 3 of the sign-up process. Only 28% completed onboarding.</p>
+              <p><strong>My Approach:</strong> I conducted 12 user interviews, mapped the friction points, and redesigned the flow in Figma — reducing steps from 7 to 4, adding micro-interactions for feedback, and simplifying form fields.</p>
+              <p><strong>I Built It:</strong> Then I implemented the entire flow in React with Zustand state, custom hooks for form validation, and accessible ARIA labels. Used Cypress to test critical paths.</p>
+              <p><strong>The Result:</strong> Onboarding completion jumped to 71% within 2 weeks. The design system became the company standard.</p>
+            </div>
+            <div class="case-study-images">
+              <img src="images/case-study-1.jpg" alt="Before/After: Banking App Onboarding" style="width: 100%; border-radius: 12px; margin-top: 1.5rem;">
+            </div>
+          </div>
+          <a href="https://your-github.com/your-banking-project" class="btn btn-small" target="_blank">View Full Case Study →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Layer -->
+    <div class="layer contact-layer">
+      <div class="container">
+        <h2>Let’s Build Something That Matters</h2>
+        <p>I’m open to roles where design and engineering collide — startups, product teams, or open-source projects.</p>
+        <p>
+          <a href="mailto:hello@yourname.com" class="contact-link">hello@yourname.com</a><br>
+          <a href="https://linkedin.com/in/yourname" target="_blank">LinkedIn</a> •
+          <a href="https://github.com/yourname" target="_blank">GitHub</a> •
+          <a href="https://dribbble.com/yourname" target="_blank">Dribbble</a>
+        </p>
+        <p style="margin-top: 2rem; font-size: 0.9rem; color: #666;">
+          I love working with teams who care about users, not just features.
+        </p>
+      </div>
+    </div>
+
+    <!-- Floating 3D Elements (Decorative) -->
+    <div class="floating-element element-1"></div>
+    <div class="floating-element element-2"></div>
+    <div class="floating-element element-3"></div>
+  </div>
 
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>&copy; 2025 Your Name. Built with ❤️ on Ubuntu.</p>
+      <p>&copy; 2025 Your Name. Built with ❤️ on Ubuntu + 3D.</p>
     </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
-</html>
