@@ -1,6 +1,9 @@
 # ==========================================================
 # Render Deployment Config for Cinematic Portfolio
 # ==========================================================
+
+services:
+  # --- Backend API Service ---
   - type: web
     name: cinematic-portfolio-backend
     env: node
@@ -14,27 +17,12 @@
       - key: DATABASE_URL
         sync: false
 
-services:
-  # --- Backend API Service ---
-  - type: web
-    name: cinematic-portfolio-backend
-    env: node
-    plan: free
-    rootDir: backend            # 👈 Important
-    buildCommand: npm install && npm run build
-    startCommand: npm start
-    envVars:
-      - key: NODE_VERSION
-        value: 20
-      - key: DATABASE_URL
-        sync: false
-
   # --- Frontend App Service ---
   - type: web
     name: cinematic-portfolio-frontend
     env: static
     plan: free
-    rootDir: frontend           # 👈 Important
+    rootDir: frontend
     buildCommand: npm install && npm run build
     staticPublishPath: dist
     envVars:
