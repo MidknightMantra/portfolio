@@ -8,14 +8,14 @@ services:
     name: cinematic-portfolio-backend
     env: node
     plan: free
-    rootDir: backend
+    rootDir: backend       # 👈 this tells Render where to find package.json
     buildCommand: npm install && npm run build
     startCommand: npm start
     envVars:
       - key: NODE_VERSION
         value: 20
       - key: DATABASE_URL
-        sync: false   # You'll set this manually in Render dashboard
+        sync: false   # you’ll set this manually in the dashboard
 
   # --- Frontend App Service ---
   - type: web
