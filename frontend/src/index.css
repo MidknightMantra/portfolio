@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-[#0b0b12] text-gray-100 font-sans;
+  background: linear-gradient(180deg, #050510 0%, #0c1020 100%);
+}
+.card {
+  @apply bg-white/5 border border-white/10 rounded-2xl backdrop-blur-sm;
+}
