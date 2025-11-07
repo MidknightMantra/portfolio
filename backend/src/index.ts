@@ -1,8 +1,8 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import { projectRouter } from "./routes/projects";
-import { contactRouter } from "./routes/contact";
+import { projectRouter } from "./routes/projects.js";
+import { contactRouter } from "./routes/contact.js";
 
 dotenv.config();
 
